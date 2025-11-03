@@ -14,7 +14,7 @@ Create a simple Todo List application using JavaScript, HTML, and CSS, implement
 <li>Minimalistic design</li>
 </ul>
 
-[<img src="preview.png" height="250" align="right" />](preview.png)
+[<img src="preview.png" height="250" align="right" float="right" />](preview.png)
 
 <br />
 <br />
