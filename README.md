@@ -6,6 +6,7 @@ Create a simple Todo List application using JavaScript, HTML, and CSS, implement
 
 ## Features:
 
+<div style="display:flex; justify-content:space-between; gap:1rem">
 <ul style="float:left">
 <li>Add, edit, delete, and mark tasks as completed</li>
 <li>Filter tasks by all, completed, or pending</li>
@@ -15,6 +16,8 @@ Create a simple Todo List application using JavaScript, HTML, and CSS, implement
 </ul>
 
 [<img src="preview.png" height="250" align="right" float="right" />](preview.png)
+
+</div>
 
 <br />
 <br />
