@@ -1,4 +1,26 @@
-# Frontend Development Assignment: Todo List Implementation
+# Project name: Todo List
+
+### Project Goal:
+
+Create a simple Todo List application using JavaScript, HTML, and CSS, implementing the provided models and functions. Connect the Todo List to the UI by setting up event listeners and updating the DOM whenever the list changes.
+
+## Features:
+
+<ul style="float:left">
+<li>Add, edit, delete, and mark tasks as completed</li>
+<li>Filter tasks by all, completed, or pending</li>
+<li>Persist tasks using localStorage</li>
+<li>Real-time UI updates with event listeners</li>
+<li>Minimalistic design</li>
+</ul>
+
+[<img src="preview.png" height="250" align="right" />](preview.png)
+
+<br />
+<br />
+
+<details style="border:1px solid #d4d4d4; border-radius:2px; padding:1rem;">
+<summary><h3 style="display:inline; padding-left:6px;">Teacher's notes:<h4></summary>
 
 ## Introduction
 
@@ -8,20 +30,27 @@ The content of this repository gives you a head start with a set of files and fu
 
 ## Content
 
-- [Introduction](#introduction)
-- [Content](#content)
-- [Task Description](#task-description)
-  - [Data Models and Interactions](#data-models-and-interactions)
-  - [Functions for interacting with the DOM](#functions-for-interacting-with-the-dom)
-  - [Wiring Everything together](#wiring-everything-together)
-- [Guidelines](#guidelines)
-- [Submission](#submission)
-- [Evaluation Criteria](#evaluation-criteria)
-- [Bonus Tasks](#bonus-tasks)
-  - [Intro](#intro)
-  - [Hard](#hard)
-  - [Extra Hard](#extra-hard)
-- [Links](#links)
+- [Project name: Todo List](#project-name-todo-list)
+  - [Project Goal:](#project-goal)
+  - [Features:](#features)
+  - [Introduction](#introduction)
+  - [Content](#content)
+  - [Task Description](#task-description)
+    - [Data Models and Interactions](#data-models-and-interactions)
+    - [Functions for interacting with the DOM](#functions-for-interacting-with-the-dom)
+    - [Wiring Everything Together](#wiring-everything-together)
+  - [Guidelines](#guidelines)
+  - [Submission](#submission)
+  - [Evaluation Criteria](#evaluation-criteria)
+  - [Bonus Tasks](#bonus-tasks)
+    - [Intro](#intro)
+      - [Expand the TodoList Interface](#expand-the-todolist-interface)
+      - [Uppgrade the user input](#uppgrade-the-user-input)
+    - [Hard](#hard)
+      - [Add more interactivity](#add-more-interactivity)
+    - [Extra Hard](#extra-hard)
+      - [Plan for unknown future extensions](#plan-for-unknown-future-extensions)
+  - [Links](#links)
 
 ## Task Description
 
@@ -35,20 +64,20 @@ We have provided you with the following definitions for the data models and meth
  * we will store in our Todo List
  */
 const exampleTodo1 = {
-  id: 0,
-  title: "Feed Sharks",
-  isComplete: false,
-  createdAt: "3/12/23",
-  updatedAt: "3/12/23",
-};
+	id: 0,
+	title: 'Feed Sharks',
+	isComplete: false,
+	createdAt: '3/12/23',
+	updatedAt: '3/12/23',
+}
 
 const exampleTodo2 = {
-  id: 12,
-  title: "Dance in the moonlight",
-  isComplete: false,
-  createdAt: "12/12/12",
-  updatedAt: "12/12/12",
-};
+	id: 12,
+	title: 'Dance in the moonlight',
+	isComplete: false,
+	createdAt: '12/12/12',
+	updatedAt: '12/12/12',
+}
 
 /**
  * An example of what inputs
@@ -56,12 +85,12 @@ const exampleTodo2 = {
  * new Todo item
  */
 const exampleUserSubmitted1 = {
-  title: "Mince Meat",
-};
+	title: 'Mince Meat',
+}
 
 const exampleUserSubmitted2 = {
-  title: "Catch Piranhas",
-};
+	title: 'Catch Piranhas',
+}
 
 // The required set of function
 // we need to have a minamal usable
@@ -121,7 +150,7 @@ In addition you need atleast the following functions for:
     *
     * @param {Todo[]} todoes
     */
-   updateDisplay(todoes);
+   updateDisplay(todoes)
    ```
 
    This function should update the display with the current list of Todos.
@@ -205,11 +234,11 @@ Instead of using a simple `<input type="text" />` and a `<button>` exchange it t
 Using the `Enter` key when one of the `<form>` elements input are selected triggers the forms `submit` event. Which default action is to send the content of the form to the server your web application is hosted at. This is probably not what you want for this application. To prevent this you will have to look at how to use the `event` object which is passed to all event handlers and use the `event.preventDefault()` method to stop this default action.
 
 ```javascript
-const formElement = document.querySelector("form");
-formElement.addEventListner("submit", (submitEvent) => {
-  submitEvent.preventDefault(); // Default action prevented
-  // Rest of your logic
-});
+const formElement = document.querySelector('form')
+formElement.addEventListner('submit', submitEvent => {
+	submitEvent.preventDefault() // Default action prevented
+	// Rest of your logic
+})
 ```
 
 **TIPS**
@@ -277,26 +306,26 @@ function removeChangeListner(listner) {}
 - Setup the update display to be run everytime the todolist changes
 
   ```javascript
-  todoList.addChangeListner((todoes) => console.log(todoes));
+  todoList.addChangeListner(todoes => console.log(todoes))
 
   // These should log the current content of
   // the todo list to the console
-  todoList.addTodo({ title: "Hello World" });
-  todoList.addTodo({ title: "hello World" });
+  todoList.addTodo({ title: 'Hello World' })
+  todoList.addTodo({ title: 'hello World' })
   ```
 
 - Setup a new function for persisting the Todo List to [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) whenever it changes
 
   ```javascript
-  todoList.addChangeListner((todoes) => {
-    const serializedTodoes = JSON.stringify(todoes);
-    localStorage.setItem("todolist", serializedTodoes);
-  });
+  todoList.addChangeListner(todoes => {
+  	const serializedTodoes = JSON.stringify(todoes)
+  	localStorage.setItem('todolist', serializedTodoes)
+  })
 
   // Now whenever you mutate (edit) the todo list
   // It should be reflected in the browsers local storage
-  todoList.addTodo({ title: "Hello World" });
-  todoList.addTodo({ title: "hello World" });
+  todoList.addTodo({ title: 'Hello World' })
+  todoList.addTodo({ title: 'hello World' })
 
   // Now you just need to figure out how to
   // load the stored data on startup...
@@ -315,3 +344,4 @@ You need to do some research for how to implement this. [Hint](https://en.wikipe
   - [Create Element](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
   - [Remove Element](https://developer.mozilla.org/en-US/docs/Web/API/Element/remove)
 - [JSDoc](https://jsdoc.app/)
+</details>
