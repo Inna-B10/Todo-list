@@ -4,26 +4,34 @@
 
 Create a simple Todo List application using JavaScript, HTML, and CSS, implementing the provided models and functions. Connect the Todo List to the UI by setting up event listeners and updating the DOM whenever the list changes.
 
-## Features:
+## 💎 Description
 
-<div style="display:flex; justify-content:space-between; gap:1rem">
-<ul style="float:left">
-<li>Add, edit, delete, and mark tasks as completed</li>
-<li>Filter tasks by all, completed, or pending</li>
-<li>Persist tasks using localStorage</li>
-<li>Real-time UI updates with event listeners</li>
-<li>Minimalistic design</li>
-</ul>
+[<img src="preview.png" height="250" align="right" float="right" style="margin-left:20px" />](preview.png)
 
-[<img src="preview.png" height="250" align="right" float="right" />](preview.png)
+"Todo List" is a task management app built with Vanilla JavaScript. It allows user to create, edit, delete, and mark tasks as completed. The app features filtering by all, completed, or pending tasks. It also stores data in localStorage, ensuring persistence across sessions. The interactive UI updates the DOM in real-time using event listeners.
 
-</div>
+### Features:
 
-<br />
-<br />
+- Add, edit, delete, and mark tasks as completed
+- Filter tasks by all, completed, or pending
+- Persist tasks using localStorage
+- Real-time UI updates with event listeners
+- Minimalistic design
+
+### 🧩 Built With
+
+![HTML](https://img.shields.io/badge/HTML-424242?logo=html5)
+![CSS](https://img.shields.io/badge/CSS-424242?logo=css)
+![JavaScript](https://img.shields.io/badge/JavaScript-424242?logo=javascript)
+
+<!-- end:tech-stack -->
+
+### 🚀 [View demo](https://inna-b10.github.io/Todo-list/)
+
+---
 
 <details style="border:1px solid #d4d4d4; border-radius:2px; padding:1rem;">
-<summary><h3 style="display:inline; padding-left:6px;">Teacher's notes:<h4></summary>
+<summary><h3 style="display:inline; padding-left:6px;">Teacher's notes<h3></summary>
 
 ## Introduction
 
@@ -35,7 +43,10 @@ The content of this repository gives you a head start with a set of files and fu
 
 - [Project name: Todo List](#project-name-todo-list)
   - [Project Goal:](#project-goal)
-  - [Features:](#features)
+  - [💎 Description](#-description)
+    - [Features:](#features)
+    - [🧩 Built With](#-built-with)
+    - [🚀 View demo](#-view-demo)
   - [Introduction](#introduction)
   - [Content](#content)
   - [Task Description](#task-description)
