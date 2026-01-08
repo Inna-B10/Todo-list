@@ -31,7 +31,7 @@ Create a simple Todo List application using JavaScript, HTML, and CSS, implement
 ---
 
 <details style="border:1px solid #d4d4d4; border-radius:2px; padding:1rem;">
-<summary><h3 style="display:inline; padding-left:6px;">Teacher's notes<h3></summary>
+<summary><h3 style="display:inline; padding-left:6px;">Teacher's notes</h3></summary>
 
 ## Introduction
 
